@@ -1,0 +1,430 @@
+:root {
+    --clr-1: #000;
+    --clr-2: #fff;
+    --clr-3: #f0eeeb;
+    --clr-4: #827c6f;
+
+}
+
+/* 
+mensagem top font-size: 16px;
+logo font-size: 20px;
+*/
+
+/* geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+html {
+    font-family: 'Roboto', sans-serif;
+    color: var(--clr-1);
+}
+.max-width {
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+/* header */
+header {
+    background-color: var(--clr-3);
+}
+header .mensagem {
+    background-color: var(--clr-1);
+    color: var(--clr-2);
+    text-align: center;
+    padding: .7rem 3.5rem;
+}
+header .mensagem p {
+    font-size: 16px;
+}
+header .mensagem p span {
+    color: #fbe850;
+    margin: 0 5px;
+}
+header .mensagem p .underline {
+    text-decoration: underline;
+    color: var(--clr-2);
+}
+header .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+.header-top p {
+    font-size: 20px;
+    font-weight: 500;
+}
+.header-top ul {
+    display: flex;
+    gap: 15px;
+}
+.header-top ul li {
+    padding: 5px 10px;
+}
+.header-top ul li a{ 
+    color: var(--clr-1);
+    display: block;
+    transition: all .5s;
+}
+.header-top ul li:hover a{ 
+    transform: translateY(-5px);
+}
+.header-top ul li .btn{ 
+    display: none;
+}
+.header-top .login {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.header-top .login a {
+    color: var(--clr-1);
+    font-size: 15px;
+    padding: 10px 15px;
+    transition: all .5s;
+}
+.header-top .login a:hover {
+    transform: translateY(-5px);
+}
+.header-top .login .btn {
+    background-color: var(--clr-1);
+    color: var(--clr-2);
+    text-transform: capitalize;
+    padding: 15px 25px;
+    border-radius: 5px;
+    transition: all .5s;
+}
+
+#btnMobile{ 
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .header-top #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 0px;
+        top: 175px;
+        right: 0;
+        transition: .5s;
+        background-color: var(--clr-3);
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+    .header-top #navLinks.active #menu {
+        height: auto;
+        visibility: visible;
+    }
+    .header-top #menu a {
+        font-size: 20px;
+        padding: 1rem 0;
+        margin: 0 2rem;
+        border-bottom: 1px solid var(--clr-1);
+    }
+    .header-top #btnMobile {
+        display: flex;
+        padding: 1rem 1rem;
+        cursor: pointer;
+    }
+    .header-top .login {
+        display: none;
+    }
+    .header-top ul li .btn{ 
+        display: block;
+    }
+}
+@media (max-width: 370px) {
+    .header-top #menu {
+        top: 230px;
+    }
+}
+
+/* seção 1 */
+.section-1 {
+    width: 100%;
+    background-color: var(--clr-3);
+}
+.section-1 .banner {
+    display: flex;
+    gap: 5rem;
+}
+.section-1 .banner .direita h2 {
+    margin-top: 2rem;
+    font-size: 40px;
+}
+.section-1 .banner .direita .info {
+    font-size: 15px;
+    margin: 1rem 0;
+    color: var(--clr-4);
+}
+.section-1 .banner .direita div {
+    display: flex;
+    margin-bottom: .4rem;
+    color: var(--clr-4);
+    font-size: 14px;
+    font-weight: bold;
+}
+.section-1 .banner .direita div img{
+    width: 20px;
+    margin-right: 10px;
+}
+.section-1 .banner .direita .inputs{
+    gap: 10px;
+    margin: 25px 0 100px 0;
+}
+.section-1 .banner .direita .inputs input{
+    color: #9e9e9e;
+    padding: 15px 10px;
+    text-align: center;
+    border: 1px solid #9e9e9e;
+    border-radius: 5px;
+}
+.section-1 .banner .direita .inputs a{
+    background-color: var(--clr-1);
+    color: var(--clr-2);
+    text-transform: capitalize;
+    padding: 15px 25px;
+    border-radius: 5px;
+    transition: all .5s;
+}
+.section-1 .banner .esquerda .img {
+    background-image: url(../img/hero/Hero\ Image\ \(Desktop\).png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 300px;
+    height: 370px;
+    margin-bottom: 50px;
+}
+@media (max-width: 860px) {
+    .section-1 .banner .direita h2 {
+        margin-top: 1rem;
+        font-size: 30px;
+    }
+    .section-1 .banner {
+        gap: 2rem;
+    }
+}
+@media (max-width: 768px) {
+    .section-1 .banner {
+        flex-direction: column-reverse;
+    }
+    .section-1 .banner .esquerda .img {
+        background-image: url(../img/hero/Hero\ Image\ \(Tablet\).png);
+        width: 100%;
+        height: 350px;
+        margin-bottom: 20px;
+    }
+    .section-1 .banner .direita h2 {
+        margin-top: 0;
+        font-size: 40px;
+    }
+}
+@media (max-width: 450px) {
+    .section-1 .banner .esquerda .img {
+        background-image: url(../img/hero/Hero\ Image\ \(Mobile\).png);
+        margin-bottom: 0;
+    }
+    .section-1 .banner .direita h2 {
+        font-size: 30px;
+    }
+    .section-1 .banner .direita .inputs {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* section 2 */
+.section-2 {
+    margin-top: 5rem;
+}
+.section-2 .banner {
+    background-color: var(--clr-3);
+    background-image: url(../img/phone/Phone\ Mockup\ \(Desktop\).png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 4rem;
+    border-radius: 20px;
+}
+.section-2 .banner h2 {
+    width: 55%;
+    font-size: 40px;
+}
+.section-2 .banner p {
+    width: 55%;
+    margin: 1rem 0;
+    color: var(--clr-4);
+}
+.section-2 .banner a {
+    color: var(--clr-4);
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 2rem;
+}
+@media (max-width: 1130px) {
+    .section-2 .banner {
+        height: 700px;
+        background-image: url(../img/phone/Phone\ Mockup\ \(Tablet\).png);
+        background-position: bottom right 40px;
+    }
+    .section-2 .banner h2 {
+        width: 80%;
+    }
+    .section-2 .banner p {
+        width: 90%;
+    }
+}
+@media (max-width: 900px) {
+    .section-2 .banner {
+        height: 650px;
+        padding: 3rem;
+    }
+}
+@media (max-width: 750px) {
+    .section-2 .banner {
+        height: 550px;
+        padding: 2rem;
+    }
+    .section-2 .banner h2 {
+        width: 90%;
+        font-size: 40px;
+    }
+    .section-2 .banner p {
+        width: 100%;
+    }
+}
+@media (max-width: 500px) {
+    .section-2 .banner {
+        height: 600px;
+        background-image: url(../img/phone/Phone\ Mockup\ \(Mobile\).png);
+        background-position: bottom;
+        padding: 1rem;
+    }
+    .section-2 .banner h2 {
+        width: 100%;
+        font-size: 30px;
+    }
+    .section-2 .banner p {
+        width: 100%;
+        font-size: 15px;
+    }
+}
+
+/* section 3 */
+.section-3 .editor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-3 .editor img {
+    width: 600px;
+}
+.section-3 .editor .text h2 {
+    font-size: 40px;
+}
+.section-3 .editor .text p {
+    margin: 1rem 0;
+    color: var(--clr-4);
+}
+.section-3 .editor .text a {
+    color: var(--clr-4);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+@media (max-width: 1130px) {
+    .section-3 .editor img {
+        width: 500px;
+    }
+}
+@media (max-width: 950px) {
+    .section-3 .editor {
+        flex-direction: column-reverse;
+        padding-top: 5rem;
+    }
+    .section-3 .editor img {
+        width: 700px;
+    }
+}
+@media (max-width: 768px) {
+    .section-3 .editor img {
+        width: 600px;
+    }
+}
+@media (max-width: 600px) {
+    .section-3 .editor img {
+        width: 500px;
+    }
+}
+@media (max-width: 500px) {
+    .section-3 .editor img {
+        width: 300px;
+    }
+    .section-3 .editor .text h2 {
+        font-size: 30px;
+    }
+    .section-3 .editor .text p {
+        font-size: 15px;
+    }
+}
+@media (max-width: 300px) {
+    .section-3 .editor img {
+        width: 200px;
+    }
+}
+
+/* footer */
+footer {
+    background-color: var(--clr-1);
+    color: var(--clr-2);
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 5rem 0;
+}
+.footer .col-1 {
+    width: 40%;
+}
+.footer .col-1 h4 {
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+.footer .col-1 p {
+    color: var(--clr-4);
+}
+.footer .col-2 p,
+.footer .col-3 p,
+.footer .col-4 p,
+.footer .col-5 p {
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+.footer ul {
+    color: var(--clr-4);
+}
+.footer ul li {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-wrap: wrap;
+        justify-content: left;
+        gap: 30px;
+    }
+}
+@media (max-width: 500px) {
+    .footer .col-1 {
+        width: 100%;
+    }
+}
