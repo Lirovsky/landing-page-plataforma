@@ -5,12 +5,6 @@
     --clr-4: #827c6f;
 
 }
-
-/* 
-mensagem top font-size: 16px;
-logo font-size: 20px;
-*/
-
 /* geral */
 * {
     margin: 0;
@@ -156,7 +150,6 @@ header .header-top {
     gap: 5rem;
 }
 .section-1 .banner .direita h2 {
-    margin-top: 2rem;
     font-size: 40px;
 }
 .section-1 .banner .direita .info {
@@ -194,8 +187,7 @@ header .header-top {
     border-radius: 5px;
     transition: all .5s;
 }
-.section-1 .banner .esquerda .img {
-    background-image: url(../img/hero/Hero\ Image\ \(Desktop\).png);
+.section-1 .banner .esquerda picture img {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -216,11 +208,11 @@ header .header-top {
     .section-1 .banner {
         flex-direction: column-reverse;
     }
-    .section-1 .banner .esquerda .img {
-        background-image: url(../img/hero/Hero\ Image\ \(Tablet\).png);
-        width: 100%;
-        height: 350px;
-        margin-bottom: 20px;
+    .section-1 .banner .esquerda picture img {
+        width: 80%;
+        height: auto;
+        display: flex;
+        margin: 0 auto;
     }
     .section-1 .banner .direita h2 {
         margin-top: 0;
@@ -228,10 +220,6 @@ header .header-top {
     }
 }
 @media (max-width: 450px) {
-    .section-1 .banner .esquerda .img {
-        background-image: url(../img/hero/Hero\ Image\ \(Mobile\).png);
-        margin-bottom: 0;
-    }
     .section-1 .banner .direita h2 {
         font-size: 30px;
     }
